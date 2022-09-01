@@ -1,14 +1,14 @@
 <h1 align="center">Novo SIGAA</h1>
 
 # Atividade
-Para ver o que foi desenvolvido basta [clicar aqui](https://izaias.me/tecnologias-web/assignments/novo_sigaa/index.html).
+Para ver o que foi desenvolvido basta [clicar aqui](https://izaias.me/tecnologias-web/assignments/novo_sigaa/).
 
 # Roteiro
 Por meio da linguagem HTML (apenas HTML) crie um conjunto de páginas web com intuito de criar um Novo SIGAA (visão do aluno).
 
 As páginas a serem implementadas deverão utilizar o arquivo “main.css”. Para importar este arquivo na suas páginas você deverá colocar o código abaixo no head das páginas.
 
-```
+```html
 <link rel="stylesheet" href="main.css">
 ```
 

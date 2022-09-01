@@ -1,1 +1,6 @@
 # Tecnologias Web
+
+## Atividades
+| Nome | Descrição | Aplicação |
+| ---- | --------- | --------- |
+| **Novo SIGAA** | [README](/assignments/novo_sigaa/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/novo_sigaa/) | 
