@@ -3,7 +3,8 @@
 # Atividade
 Para ver o que foi desenvolvido basta [clicar aqui](https://izaias.me/tecnologias-web/assignments/novo_sigaa/).
 
-# Roteiro
+# Roteiros
+## Laboratório 1 (01/09/2022)
 Por meio da linguagem HTML (apenas HTML) crie um conjunto de páginas web com intuito de criar um Novo SIGAA (visão do aluno).
 
 As páginas a serem implementadas deverão utilizar o arquivo “main.css”. Para importar este arquivo na suas páginas você deverá colocar o código abaixo no head das páginas.
@@ -44,6 +45,22 @@ Obs: o formulário deve ser feito com as novas tags do HTML5
 ### Requisitos para a atividade
 - Você deverá utilizar apenas HTML para criar sua página.
 - Você deverá utilizar as novas TAGs HTML5 para dar semântica para sua página.
+
+## Laboratório 2 (08/09/2022)
+Utilizando suas páginas criadas no Laboratório 1 (Novo SIGAA), você nessa atividade, deverá estilizar páginas utilizando os recursos do CSS vistos até o momento na disciplina.
+
+Obs: A forma do uso do CSS é livre, você poderá estilizar sua página como preferir. 
+
+Os seguintes itens devem ser utilizados na suas páginas
+
+1. CSS interno, externo e inline ( inline apenas em uma única vez)
+2. Todos os tipos de seletores
+3. Possibilidades do display
+4. Tipos diferentes de fontes
+5. Backgrounds diversos nas páginas
+6. Box Model
+7. Padding e Margin
+8. Posicionamento
 
 ### Consulta
 - [W3Schools](https://www.w3schools.com/html/default.asp)
