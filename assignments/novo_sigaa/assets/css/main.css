@@ -118,7 +118,7 @@ section {
 
 #container {
   margin-left: 20px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* margin-left: 20px; */
 }
 
