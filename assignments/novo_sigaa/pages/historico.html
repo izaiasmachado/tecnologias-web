@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="stylesheet" href="../assets/css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico - Novo SIGAA</title>
+    <style>
+        #tabela-historico td:nth-child(1), #tabela-historico td:nth-child(4) {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas - <a href="../index.html">SAIR</a>
+        Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas - <a
+            href="../index.html">SAIR</a>
     </header>
     <nav>
         <a href="painel_de_controle.html">Painel de Controle</a>
         <a href="historico.html">Histórico</a>
-        <a href="cadastro_atividades.html">Cadastro de Componentes Curricularess</a>    
+        <a href="cadastro_atividades.html">Cadastro de Componentes Curricularess</a>
     </nav>
 
-    <section>
-        <table border="1">
-            <tr colspan="2">
-                <td>Semestre</td>
-                <td>Disciplina</td>
-                <td>Docente</td>
-                <td>Nota</td>
-            </tr>
-            <tr>
-                <td>2020.1</td>
-                <td>INTRODUÇÃO A ENGENHARIA</td>
-                <td>DANILO ALVES OLIVEIRA</td>
-                <td>8,8</td>
-            </tr>
-            <tr>
-                <td>2020.1</td>
-                <td>MATEMÁTICA DISCRETA PARA COMPUTAÇÃO</td>
-                <td>RICARDO PIRES DOS SANTOS</td>
-                <td>8,8</td>
-            </tr>
-            <tr>
-                <td>2020.1</td>
-                <td>CÁLCULO DIFERENCIAL E INTEGRAL I</td>
-                <td>RUI FACUNDO VIGELIS</td>
-                <td>9,3</td>
-            </tr>
-            <tr>
-                <td>2020.1</td>
-                <td>FÍSICA GERAL I</td>
-                <td>LUIS EDUARDO ARARIPE GOMES DA SILVA</td>
-                <td>10,0</td>
-            </tr>
-            <tr>
-                <td>2020.1</td>
-                <td>PROGRAMAÇÃO COMPUTACIONAL</td>
-                <td>FERNANDO RODRIGUES DE ALMEIDA JUNIOR</td>
-                <td>9,8</td>
-            </tr>
-        </table>
-    </section>
+    <main>
+        <section style="float: none;">
+            <table id="tabela-historico" class="tabela zebrada">
+                <tr>
+                    <th>Semestre</th>
+                    <th>Disciplina</th>
+                    <th>Docente</th>
+                    <th>Nota</th>
+                </tr>
+                <tr>
+                    <td>2020.1</td>
+                    <td>INTRODUÇÃO A ENGENHARIA</td>
+                    <td>DANILO ALVES OLIVEIRA</td>
+                    <td>8,8</td>
+                </tr>
+                <tr>
+                    <td>2020.1</td>
+                    <td>MATEMÁTICA DISCRETA PARA COMPUTAÇÃO</td>
+                    <td>RICARDO PIRES DOS SANTOS</td>
+                    <td>8,8</td>
+                </tr>
+                <tr>
+                    <td>2020.1</td>
+                    <td>CÁLCULO DIFERENCIAL E INTEGRAL I</td>
+                    <td>RUI FACUNDO VIGELIS</td>
+                    <td>9,3</td>
+                </tr>
+                <tr>
+                    <td>2020.1</td>
+                    <td>FÍSICA GERAL I</td>
+                    <td>LUIS EDUARDO ARARIPE GOMES DA SILVA</td>
+                    <td>10,0</td>
+                </tr>
+                <tr>
+                    <td>2020.1</td>
+                    <td>PROGRAMAÇÃO COMPUTACIONAL</td>
+                    <td>FERNANDO RODRIGUES DE ALMEIDA JUNIOR</td>
+                    <td>9,8</td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2022 - Novo SIGAA</p>
@@ -64,4 +74,5 @@
 
 
 </body>
+
 </html>
