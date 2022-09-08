@@ -18,25 +18,35 @@
     </nav>
 
     <main>
-        <section>
+        <section id="submit-activity">
             <form>
-                Nome da Atividade: <input type="text" placeholder="Nome de Atividade" required>
-                <br/>
-                Horas: <input type="number" placeholder="64" min="1" required>
-                </br>
-                Data: <input type="date" placeholder="01/09/2022" max="2022-09-01" required>
-                </br>
-                Email do Responsável: <input type="email" placeholder="email@ufc.br" required>
-                </br>
-                Telefone do Responsável: <input type="tel" placeholder="(xx)xxxxx-xxxx" required>
-                </br>
-                Tipo de Atividade:
-                <select name="Tipo de Atividade" required>
+                <label for="name">Nome da Atividade</label>
+                <input id="name" type="text" placeholder="Nome da Atividade" required>
+                
+
+                <label for="hours">
+                    Quantidade de Horas
+                </label>
+
+                <input id="hours" type="number" placeholder="64" min="1" required>
+                
+            
+                <label for="date">Data</label>
+                <input id="date" type="date" placeholder="01/09/2022" max="2022-09-01" required>
+              
+                <label for="email">Email do Responsável</label>
+                <input id="email" type="email" placeholder="email@ufc.br" required>
+                
+                <label for="phone">Telefone do Responsável</label>
+                <input id="phone" type="tel" placeholder="(xx)xxxxx-xxxx" required>
+                
+                <label for="type-activity">Tipo de Atividade</label>
+
+                <select id="type-activity" name="Tipo de Atividade" required>
                     <option value="complementares">Atividade Complementar</option>
                     <option value="extensao">Atividade de Extensão</option>
                 </select>
-                </br>
-    
+
                 <input type="submit" value="Cadastrar">
             </form>
         </section>

@@ -236,3 +236,39 @@ section {
 #informacoes-perfil td:nth-child(1) {
   padding: 0 15px 0 0;
 }
+
+#submit-activity {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 700px;
+}
+
+#submit-activity h1 {
+  font-weight: bold;
+  padding: 12px;
+  margin: 10px;
+}
+
+#submit-activity label {
+  padding: 0 0 0 3px;
+  margin: 5px 10px 0px 0;
+  color: gray;
+}
+
+#submit-activity input, #submit-activity select {
+  vertical-align: middle;
+  margin: 5px 10px 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+#submit-activity input[type="submit"] {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  color: #fff;
+  background-color: #60A3D9;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
