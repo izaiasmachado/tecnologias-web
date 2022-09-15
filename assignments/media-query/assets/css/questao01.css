@@ -1,0 +1,56 @@
+body {
+    padding: 0;
+    margin: 0;   
+}
+
+div#muda-cor {
+    height: 100vh;
+}
+
+@media (min-width: 320px) { 
+    div#muda-cor {
+        background-color: black;
+    }
+}
+
+@media (min-width: 480px) { 
+    div#muda-cor {
+        background-color: lightblue;
+    }
+}
+
+@media (min-width: 600px) { 
+    div#muda-cor {
+        background-color: lightgreen;
+    }
+}
+
+@media (min-width: 768px) { 
+    div#muda-cor {
+        background-color: lightyellow;
+    }
+}
+
+@media (min-width: 800px) { 
+    div#muda-cor {
+        background-color: brown;
+    }
+}
+
+@media (min-width: 1024px) { 
+    div#muda-cor {
+        background-color: darkblue;
+    }
+}
+
+@media (min-width: 1280px) { 
+    div#muda-cor {
+        background-color: darkgreen;
+    }
+}
+
+@media (min-width: 1440px) { 
+    div#muda-cor {
+        background-color: darkred;
+    }
+}
