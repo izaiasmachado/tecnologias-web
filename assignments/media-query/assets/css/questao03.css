@@ -1,0 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;   
+}
+
+#responsividade {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#responsividade div {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+#responsividade div.verde {
+    background-color: green;
+}
+
+#responsividade div.azul {
+    background-color: blue;
+}
+
+#responsividade div.roxo {
+    background-color: purple;
+}
+
+@media (max-width: 480px) {   
+    #responsividade :not(.celular) {
+        display: none;
+    }
+    
+    #responsividade .celular {
+        height: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1920px) {   
+    #responsividade :not(.desktop) {
+        display: none;
+    }
+    
+    #responsividade .desktop {
+        height: 50%;
+    }
+}
+
+@media (min-width: 1920px) {   
+    #responsividade .tv {
+        height: 20%;
+    }
+}

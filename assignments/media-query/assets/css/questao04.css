@@ -1,0 +1,87 @@
+.botao-pais {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 2px solid black;
+}
+
+#container {
+    display: block;
+    width: 100vw;
+    height: 100%;
+}
+
+#container div {
+    display: block;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+#sobre-selecao {
+    max-width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 480px) {   
+    #lista-paises {
+        width: 100%;
+    }
+
+    #pais {
+        width: 100%;
+    }
+
+    #pais #bandeira-selecao {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1920px) {   
+    #lista-paises {
+        width: 20%;
+        float: left;
+    }
+
+    #pais {
+        width: 80%;
+        float: right;
+    }
+
+    #pais #sobre-selecao {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #pais #bandeira-selecao {
+        display: none;
+    }
+}
+
+@media (min-width: 1921px) {   
+    #lista-paises {
+        display: block;
+        width: 20%;
+        float: left;
+    }
+
+    #pais {
+        width: 80%;
+        float: right;
+    }
+
+    #pais #sobre-selecao {
+        float: left;
+    }
+
+    #pais #bandeira-selecao {
+        display: inline-block;
+        width: 20%;
+    }
+
+    #pais #bandeira-selecao img {
+        width: 100%;
+        height: 100%;
+    }
+}
