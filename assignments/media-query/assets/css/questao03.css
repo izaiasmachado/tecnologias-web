@@ -48,7 +48,11 @@ body {
     }
 }
 
-@media (min-width: 1920px) {   
+@media (min-width: 1921px) {   
+    #responsividade :not(.tv) {
+        display: none;
+    }
+
     #responsividade .tv {
         height: 20%;
     }
