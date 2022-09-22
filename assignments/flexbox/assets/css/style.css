@@ -1,0 +1,186 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+main section {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000;
+    padding: 5px;
+    margin: 5px 0;
+    height: 96vh;
+    width: 96vw;
+    display: flex;
+}
+
+div.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    width: 23%;
+    height: 28%;
+    min-width: 200px;
+    min-height: 190px;
+    background-color: #4a86e8;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #000;
+    margin: 5px;
+}
+
+div.item.red {
+    background-color: red;
+}
+
+section#part1 {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+section#part2 {
+    flex-direction: row;
+}
+
+section#part3 {
+    flex-direction: row-reverse;
+}
+
+section#part4 {
+    justify-content: center;
+}
+
+section#part5 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+section#part6 {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+
+section#part6 div.item:first-child {
+    order: +1;
+}
+
+section#part7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#part7 div#spaceAround,
+section#part7 div#spaceBetween {
+    display: flex;
+    flex-direction: row;
+}
+
+section#part7 div#spaceAround {
+    justify-content: space-around;
+}
+
+section#part7 div#spaceBetween {
+    justify-content: space-between;
+}
+
+section#part8 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section#part9 {
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+}
+
+section#part9 div.item:first-child {
+    height: 40%;
+}
+
+section#part9 div.item:last-child {
+    height: 60%;
+}
+
+section#part10 {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+section#part10 div.item {
+    height: auto;
+}
+
+section#part12 {
+    flex-direction: row;
+}
+
+section#part12 div.red {
+    order: -1;
+}
+
+section#part13 div.item:nth-child(3) {
+    order: -1;
+}
+
+section#part14, section#part15, section#part16 {
+    flex-direction: row;
+    align-items: center;
+}
+
+section#part14 div.red {
+    align-self: flex-start;
+}
+
+
+section#part15 div.red {
+    align-self: flex-end;
+}
+
+section#part16 div.red {
+    height: 100%;
+    align-self: stretch;
+}
+
+section#part17 {
+    flex-direction: row;
+    align-items: center;
+}
+
+section#part17 div.red {
+    width: 48%;
+    flex-grow: 2;
+}
+
+section#part18 {
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+    align-items: center;
+}
+
+section#part18 div.item:first-child, section#part18 div.item:last-child {
+    flex-grow: 1;
+}
