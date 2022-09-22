@@ -10,4 +10,4 @@
 ## Projetos
 | Nome | Repositório | Página |
 | ---- | ----------- | ------ |
-| **Rock in Rio - Landing Page** | [Repositório](./projects/rock-in-rio-landing-page/) | [Página Web](https://izaias.me/rock-in-rio-landing-page/)
+| **Rock in Rio - Landing Page** | [Repositório](https://github.com/izaiasmachado/rock-in-rio-landing-page) | [Página Web](https://izaias.me/rock-in-rio-landing-page/)
