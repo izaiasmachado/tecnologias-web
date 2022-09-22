@@ -34,13 +34,25 @@ div.item {
     font-weight: bold;
     width: 23%;
     height: 28%;
-    min-width: 200px;
-    min-height: 190px;
+    /* min-width: 200px;
+    min-height: 190px; */
     background-color: #4a86e8;
     border-style: solid;
     border-width: 0.5px;
     border-color: #000;
     margin: 5px;
+}
+
+@media (orientation: portrait) {
+    div.item {
+        width: 28%;
+        height: 23%;
+    }
+
+    main section {
+        height: 48vh;
+
+    }
 }
 
 div.item.red {
@@ -92,6 +104,12 @@ section#part7 div#spaceAround,
 section#part7 div#spaceBetween {
     display: flex;
     flex-direction: row;
+    height: 50%;
+}
+
+section#part7 div#spaceAround div.item,
+section#part7 div#spaceBetween div.item {
+    height: 56%; 
 }
 
 section#part7 div#spaceAround {
@@ -100,6 +118,7 @@ section#part7 div#spaceAround {
 
 section#part7 div#spaceBetween {
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 section#part8 {
@@ -108,10 +127,25 @@ section#part8 {
     align-items: center;
 }
 
-section#part9 {
-    width: fit-content;
+section#part9, section#part10 {
+    max-width: 80%;
     flex-direction: row;
+    justify-content: center;
+}
+
+@media (orientation: portrait) {
+    section#part9, section#part10 {
+        max-width: 88%;
+    }
+}
+
+section#part9 {
+    min-width: fit-content;
     align-items: center;
+}
+
+section#part9 div.item {
+    width: 100%;
 }
 
 section#part9 div.item:first-child {
@@ -123,14 +157,12 @@ section#part9 div.item:last-child {
 }
 
 section#part10 {
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    align-items: none;
 }
 
 section#part10 div.item {
-    height: auto;
+    height: auto; 
+    width: 100%;
 }
 
 section#part12 {
