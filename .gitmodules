@@ -1,0 +1,4 @@
+[submodule "projects/rock-in-rio-landing-page"]
+	path = projects/rock-in-rio-landing-page
+	url = git@github.com:izaiasmachado/rock-in-rio-landing-page.git
+	branch = main
