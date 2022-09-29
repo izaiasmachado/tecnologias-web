@@ -1,18 +1,38 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px 50px 5px;
+}
+
 .grid {
+    border: 2px solid #909090;
     display: grid;    
-    margin-bottom: 1rem;
+    min-width: 300px;
+    min-height: 310px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 .item {
-    background-color: gray;
+    background-color: #dbdbdb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 4px 0 0 4px;
+    border: 0.4px solid #a1a1a1;
 }
 
 .item.c {
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
 
 .item.f, .item.h {
-    background-color: blue;
+    background-color: #567da4;
+    color: white;
 }
 
 #partA {
@@ -36,7 +56,7 @@
 
 #partB {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: repeat(3, 1fr);
 }
 
 #partB .h {
@@ -67,7 +87,7 @@
 
 #partC {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: repeat(3, 1fr);
 }
 
 #partC .h {
@@ -98,7 +118,7 @@
 
 #partD {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 100px 100px 50px;
+    grid-template-rows: repeat(3, 2fr) 1fr;
 }
 
 #partD .a {
@@ -137,7 +157,7 @@
 
 #partE {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 #partE .h {
@@ -169,7 +189,7 @@
 
 #partG {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px 100px 100px;
+    grid-template-rows: 2fr 1fr 1fr;
 }
 
 #partG .c {
@@ -191,7 +211,7 @@
 
 #partH {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 60px 60px 120px 120px;
+    grid-template-rows: 1fr 1fr 2fr 2fr;
 }
 
 #partH .a, #partH .b {
@@ -232,9 +252,8 @@
 }
 
 #partI {
-    width: 400px;
     grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
-    grid-template-rows: 50px 50px 50px 100px 50px
+    grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
 }
 
 #partI .a {
@@ -277,9 +296,8 @@
 }
 
 #partJ {
-    width: 400px;
     grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
-    grid-template-rows: 60px repeat(6, 40px) 80px;
+    grid-template-rows: 6fr repeat(6, 4fr) 8fr;
 }
 
 #partJ .c, #partJ .h, #partJ .f {
@@ -341,9 +359,7 @@
 }
 
 #partL {
-    width: 400px;
-    height: 400px;
-    grid-template-columns: 30px 1fr 1fr;
+    grid-template-columns: 1fr 4fr 4fr;
     grid-template-rows: repeat(4, 1fr);
 }
 
@@ -367,9 +383,7 @@
 }
 
 #partM {
-    width: 400px;
-    height: 400px;
-    grid-template-columns: 30px 1fr 1fr;
+    grid-template-columns: 1fr 4fr 4fr;
     grid-template-rows: repeat(4, 1fr);
 }
 
@@ -393,9 +407,7 @@
 }
 
 #partN {
-    width: 400px;
-    height: 400px;
-    grid-template-columns: 30px 1fr 2fr;
+    grid-template-columns: 1fr 3fr 4fr;
     grid-template-rows: repeat(2, 1fr);
 }
 
