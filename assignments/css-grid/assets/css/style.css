@@ -1,0 +1,420 @@
+.grid {
+    display: grid;    
+    margin-bottom: 1rem;
+}
+
+.item {
+    background-color: gray;
+}
+
+.item.c {
+    background-color: #f2f2f2;
+}
+
+.item.f, .item.h {
+    background-color: blue;
+}
+
+#partA {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+}
+
+#partA .h {
+    grid-row-start: 1;
+}
+
+#partA .c {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#partA .f {
+    grid-column-end: 5;
+    grid-row-start: 2;
+}
+
+#partB {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+}
+
+#partB .h {
+    grid-row-end: 2;
+}
+
+#partB .f {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partB .c, #partB .g {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#partB .a {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;   
+}
+
+#partB .c {
+    z-index: 1;
+}
+
+#partC {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+}
+
+#partC .h {
+    grid-row-end: 2;
+}
+
+#partC .b {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partC .c, #partC .g {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#partC .c {
+    z-index: 1;
+}
+
+#partC .a {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 5;
+}
+
+#partD {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px 100px 50px;
+}
+
+#partD .a {
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partD .b {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#partD .c, #partD .d, #partD .e, #partD .g {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partD .c {
+    z-index: 1;
+}
+
+#partD .h {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 2;
+}
+
+#partD .f {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-end: 5;
+}
+
+#partE {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+#partE .h {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 2;
+}
+
+#partE .c {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+#partE .d {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#partE .f, #partE .e, #partE .g {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partE .f {
+    z-index: 1;
+}
+
+#partG {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 100px 100px;
+}
+
+#partG .c {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+}
+
+#partG .g {
+    grid-column-start: 3;
+    grid-row-end: 4;
+}
+
+#partG .h {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+}
+
+#partH {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 60px 60px 120px 120px;
+}
+
+#partH .a, #partH .b {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#partH .c, #partH .g {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#partH .c, #partH .d, #partH .e {
+    z-index: 1;
+}
+
+#partH .d, #partH .e {
+    grid-row-start: 3;
+}
+
+#partH .d {
+    grid-column-start: 2;
+}
+
+#partH .e {
+    grid-column-start: 4;
+}
+
+#partH .f, #partH .h {
+    grid-column-start: 6;
+    grid-column-end: 8;
+}
+
+#partH .h {
+    grid-row-start: 1;   
+}
+
+#partI {
+    width: 400px;
+    grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 50px 50px 50px 100px 50px
+}
+
+#partI .a {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    z-index: 2;
+}
+
+#partI .b, #partI .d, #partI .e, #partI .g {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#partI .b {
+    z-index: 3;
+}
+
+#partI .c, #partI .h {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#partI .c {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#partI .c {
+    z-index: 1;
+}
+
+#partI .f {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-end: 6;
+}
+
+#partJ {
+    width: 400px;
+    grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
+    grid-template-rows: 60px repeat(6, 40px) 80px;
+}
+
+#partJ .c, #partJ .h, #partJ .f {
+    grid-column-start: 3;
+}
+
+#partJ .a, #partJ .i {
+    grid-column-start: 2;
+}
+
+#partJ .b, #partJ .e {
+    grid-column-start: 4;
+}
+
+#partJ .a {
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+#partJ .b {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#partJ .c {
+    grid-row-start: 2;
+    grid-row-end: 8;
+}
+
+
+#partJ .d {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+#partJ .e {
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+#partJ .f {
+    grid-row-end: 9;
+}
+
+#partJ .g {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 6;
+}
+
+#partJ .h {
+    grid-row-start: 1;
+}
+
+#partJ .i {
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+
+#partL {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 30px 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#partL .c, #partL .h {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#partL .c {
+    grid-column-start: 2;
+}
+
+#partL .f, #partL .g, #partL .h, #partL .i {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#partL .h {
+    z-index: 1;
+}
+
+#partM {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 30px 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#partM .c, #partM .h {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#partM .c {
+    grid-column-start: 2;
+}
+
+#partM .f, #partM .g, #partM .h, #partM .i {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#partM .h {
+    z-index: 1;
+}
+
+#partN {
+    width: 400px;
+    height: 400px;
+    grid-template-columns: 30px 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#partN .h, #partN .d, #partN .e, #partN .h, #partN .f, #partN .g, #partN .i {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+#partN .h {
+    z-index: 1;
+}
+
+#partN .a, #partN .b {
+    grid-column-start: 2;
+}
+
+#partN .c {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
