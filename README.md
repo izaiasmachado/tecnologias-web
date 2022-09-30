@@ -6,6 +6,7 @@
 | **Novo SIGAA** | [README](/assignments/novo_sigaa/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/novo_sigaa/) | 
 | **Media Query** | [README](/assignments/media-query/README.md) | |
 | **Flexbox** | [README](/assignments/flexbox/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/flexbox) |
+| **CSS Grid** | [README](/assignments/css-grid/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/css-grid) |
 
 ## Projetos
 | Nome | Repositório | Página |
