@@ -16,19 +16,24 @@
                 Marca
             </div>
 
-
+            <label for="toggle" id="headerNavbarIcon" class="headerNavbarIcon">
+                <img src="../assets/images/menu-svgrepo-com.svg" alt="">
+            </label>
+            <input type="checkbox" id="toggle" class="visuallyHidden">
+        
             <nav id="headerNavbar">
-                <ul>
+                <label for="toggle" id="headerNavbarIconClose" class="headerNavbarIcon">
+                    X
+                </label>
+                <input type="checkbox" id="close" class="visuallyHidden">
+    
+                <ul class="headerNavbarItems">
                     <li><a class="removeHyperlinkStyle" href="#">Home</a></li>
                     <li><a class="removeHyperlinkStyle" href="#">Quem Somos</a></li>
                     <li><a class="removeHyperlinkStyle" href="#">Serviços</a></li>
                     <li><a class="removeHyperlinkStyle" href="#">Contato</a></li>
                 </ul>
             </nav>
-
-            <div id="headerNavbarIcon">
-                <img src="../assets/images/menu-svgrepo-com.svg" alt="">
-            </div>
         </div>
 
     </header>
