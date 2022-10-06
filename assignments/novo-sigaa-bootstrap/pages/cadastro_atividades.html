@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/libs/bootstrap-5.2.2-dist/css/bootstrap.min.css" >
+    <script src="assets/libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <title>Cadastro de Atividades - Novo SIGAA</title>
+</head>
+<body>
+    <header>
+        Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas - <a href="../index.html">SAIR</a>
+    </header>
+    <nav>
+        <a href="painel_de_controle.html">Painel de Controle</a>
+        <a href="historico.html">Histórico</a>
+        <a href="cadastro_atividades.html">Cadastro de Componentes Curricularess</a>    
+    </nav>
+
+    <main>
+        <section id="submit-activity">
+            <form>
+                <label for="name">Nome da Atividade</label>
+                <input id="name" type="text" placeholder="Nome da Atividade" required>
+                
+
+                <label for="hours">
+                    Quantidade de Horas
+                </label>
+
+                <input id="hours" type="number" placeholder="64" min="1" required>
+                
+            
+                <label for="date">Data</label>
+                <input id="date" type="date" placeholder="01/09/2022" max="2022-09-01" required>
+              
+                <label for="email">Email do Responsável</label>
+                <input id="email" type="email" placeholder="email@ufc.br" required>
+                
+                <label for="phone">Telefone do Responsável</label>
+                <input id="phone" type="tel" placeholder="(xx)xxxxx-xxxx" required>
+                
+                <label for="type-activity">Tipo de Atividade</label>
+
+                <select id="type-activity" name="Tipo de Atividade" required>
+                    <option value="complementares">Atividade Complementar</option>
+                    <option value="extensao">Atividade de Extensão</option>
+                </select>
+
+                <input type="submit" value="Cadastrar">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2022 - Novo SIGAA</p>
+    </footer>
+
+
+</body>
+</html>

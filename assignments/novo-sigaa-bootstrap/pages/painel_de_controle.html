@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/libs/bootstrap-5.2.2-dist/css/bootstrap.min.css" >
+    <script src="assets/libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <title>Painel de Controle - Novo SIGAA</title>
+</head>
+
+<body>
+    <header>
+        Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas - <a
+            href="../index.html">SAIR</a>
+    </header>
+    <nav>
+        <a href="painel_de_controle.html">Painel de Controle</a>
+        <a href="historico.html">Histórico</a>
+        <a href="cadastro_atividades.html">Cadastro de Componentes Curricularess</a>
+    </nav>
+
+    <main>
+        <aside id="perfil">
+            <div id="foto-perfil">
+                <img src="../assets/img/pp.jpg" alt="Foto de Perfil de Izaias Machado" />
+            </div>
+
+            <div id="informacoes-perfil" class="item-painel">
+                <table>
+                    <tr>
+                        <td>
+                            Nome:
+                        </td>
+                        <td>
+                            Izaias Machado
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                            izaiasmachado@alu.ufc.br
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IRA:
+                        </td>
+                        <td>
+                            9.2013
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Horas Cursadas:
+                        </td>
+                        <td>
+                            1728
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Paleta de Cores:
+                        </td>
+                        <td>
+                            <input type="color" value="#FF00FF">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="progresso" class="item-painel">
+                <table>
+                    <tr>
+                        <td>
+                            Disciplinas Obrigatórias
+                        </td>
+                        <td>
+                            <progress max="100" value="60">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Disciplinas Eletivas
+                        </td>
+                        <td>
+                            <progress max="100" value="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Estágio Obrigatório
+                        </td>
+                        <td>
+                            <progress max="100" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Horas Complementares
+                        </td>
+                        <td>
+                            <progress max="100" value="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Horas de Extensão
+                        </td>
+                        <td>
+                            <progress max="100" value="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Horas de Programação
+                        </td>
+                        <td>
+                            <progress max="100" value="70">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="resumo-atividades" class="item-painel">               
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Exigido</th>
+                        <th>Integralizado</th>
+                        <th>Computável</th>
+                        <th>Pendente</th>
+                    </tr>
+                    <tr>
+                        <td>Carga Horária Total</td>
+                        <td>3648</td>
+                        <td>1728</td>
+                        <td>1728</td>
+                        <td>1920</td>
+                    </tr>
+
+                    <tr>
+                        <td>Carga Horária Optativa</td>
+                        <td>896</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>896</td>
+                    </tr>
+                </table>
+            </div>
+
+        </aside>
+
+        <section id="container">
+            <div class="disciplinas">
+                <table id="tabela-disciplinas" class="tabela zebrada">
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Local</th>
+                        <th>Sala</th>
+                    </tr>
+                    <tr>
+                        <td>ECO0046</td>
+                        <td>ALGORITMOS EM GRAFOS</td>
+                        <td>Campus Mucambinho: Bloco I, Sala 03</td>
+                        <td>QUA/SEX 15:30-17:30</td>
+                    </tr>
+                    <tr>
+                        <td>ECO0031</td>
+                        <td>BANCO DE DADOS</td>
+                        <td>Campus Mucambinho: Bloco I, Sala 04</td>
+                        <td>TER/QUI 10:00-12:00</td>
+                    </tr>
+                    <tr>
+                        <td>SBL0080</td>
+                        <td>INTELIGÊNCIA COMPUTACIONAL</td>
+                        <td>Campus Mucambinho: Bloco I, Sala 06</td>
+                        <td>SEG/QUA 08:00-10:00</td>
+                    </tr>
+                    <tr>
+                        <td>ECO0057</td>
+                        <td>QUALIDADE DE SOFTWARE</td>
+                        <td>Bloco I, SEG: Sala 10/ TER: Sala 05</td>
+                        <td>SEG/TER 15:30-17:30</td>
+                    </tr>
+                    <tr>
+                        <td>ECO0056</td>
+                        <td>TECNOLOGIAS WEB</td>
+                        <td>Bloco I, Sala 04 / Lab. Prog. Computacional</td>
+                        <td>TER/QUI 10:00-12:00</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2022 - Novo SIGAA</p>
+    </footer>
+
+
+</body>
+
+</html>
