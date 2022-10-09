@@ -7,6 +7,7 @@
 | **Media Query** | [README](/assignments/media-query/README.md) | |
 | **Flexbox** | [README](/assignments/flexbox/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/flexbox) |
 | **CSS Grid** | [README](/assignments/css-grid/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/css-grid) |
+| **Novo SIGAA com Boostrap** | [README](/assignments/novo-sigaa-bootstrap/README.md) | [Página Web](https://izaias.me/tecnologias-web/assignments/novo-sigaa-bootstrap/) |
 
 ## Projetos
 | Nome | Repositório | Página |
