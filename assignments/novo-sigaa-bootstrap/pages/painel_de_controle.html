@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="../assets/libs/bootstrap-5.2.2-dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
     <script src="../assets/libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <title>Painel de Controle - Novo SIGAA</title>
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -336,12 +340,12 @@
                 </span>
               </button>
               <button
-                class="col-3 headerButton btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                class="col-3 headerButton btn btn-primary btn-sm d-flex align-items-center justify-content-around"
                 role="button"
                 data-bs-toggle="modal"
                 data-bs-target="#exitModal"
               >
-                Sair
+                <i class="bi bi-door-open"></i>Sair
               </button>
             </div>
           </div>
@@ -807,7 +811,9 @@
         <!-- Card -->
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Período de Matrícula Institucional</h5>
+            <h5 class="card-title">
+              <i class="bi bi-asterisk"></i> Período de Matrícula Institucional
+            </h5>
             <p class="card-text">
               Se liga discente! O período de Matrícula Institucional já está
               chegando. Clique no botão abaixo para ter mais informações.
@@ -817,7 +823,7 @@
               data-bs-toggle="modal"
               data-bs-target="#enrollmentInfoModal"
             >
-              Saiba mais
+              <i class="bi bi-chat-dots"></i> Saiba mais
             </button>
           </div>
         </div>
