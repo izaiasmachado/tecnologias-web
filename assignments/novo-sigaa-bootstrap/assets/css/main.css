@@ -46,8 +46,10 @@ body {
 main {
   padding: 10px;
 }
-
-header {
+.modal {
+  color: black;
+}
+.headerBar {
   background: #394674;
   color: #fff;
   width: 100%;
@@ -55,13 +57,55 @@ header {
   display: flex;
   justify-content: center;
 }
+.headerBarItem {
+  margin-bottom: 10px;
+}
+.headerBarItem:last-child {
+  margin-bottom: 0;
+}
+.headerButton {
+  font-size: small;
+  max-width: 150px;
+  min-width: 60px;
+}
+.offcanvas-body {
+  color: white;
+}
+.buttonImage, .buttonText {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
 
-nav {
+@media (min-width: 575.98px) {
+  .headerNavbar .btn {
+    font-size: small;
+    font-weight: bold;
+  }
+  .headerBarItem {
+    margin-bottom: 0;
+  }
+  .headerButton {
+    font-size: medium;
+  }
+  .inboxButton {
+    max-width: none;
+    width: 170px;
+  }
+}
+
+/* media bootstrap md */
+@media (min-width: 767.98px) {
+  .headerNavbar .btn {
+    font-size: medium;
+  }
+}
+
+.navbar {
   background-color: #C4D2EB;
   width: 100%;
   padding: 0.5rem;
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -88,19 +132,14 @@ main {
   margin: 10px;
 }
 
-aside {
-  float: left; 
-}
-
-section {
-  float: right;
-  display: block;
-}
 
 #perfil {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
   background-color: #60A3D9;
   border-radius: 10px;
+  max-width: 370px;
 }
 
 #foto-perfil {
@@ -123,11 +162,16 @@ section {
 }
 
 .item-painel {
+  max-width: 100%;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
   background-color: #BFD7ED;
   color:#394674;
+}
+
+.progress {
+  height: 8px !important;
 }
 
 #progresso {
@@ -182,14 +226,15 @@ section {
   border-radius: 0 10px 0 0;
 }
 
+.table-scrollable {
+  display: block;
+  overflow-x: auto;
+  margin: auto;
+}
+
 #tabela-disciplinas th,
 #tabela-disciplinas td {
   border: 0;
-}
-
-#tabela-disciplinas th {
-  background-color: #EFF3FA;
-  color: gray;
 }
 
 #tabela-disciplinas td:nth-child(1) {
@@ -204,10 +249,10 @@ section {
   max-width: 120px;
 }
 
-#resumo-atividades table {  
-  background-color: inherit;
+#resumo-atividades table {
   display: block;
-  width: min-content;
+  overflow-x: auto;
+  background-color: inherit;
   border-collapse: collapse;
 }
 
@@ -240,7 +285,7 @@ section {
 #submit-activity {
   background-color: #f5f5f5;
   border-radius: 10px;
-  width: 700px;
+  width: 100%;
 }
 
 #submit-activity h1 {

@@ -1,64 +1,862 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/libs/bootstrap-5.2.2-dist/css/bootstrap.min.css" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../assets/libs/bootstrap-5.2.2-dist/css/bootstrap.min.css"
+    />
     <script src="../assets/libs/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <title>Cadastro de Atividades - Novo SIGAA</title>
-</head>
-<body>
-    <header>
-        Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas - <a href="../index.html">SAIR</a>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="container-fluid headerBar">
+      <!-- Modal com um texto -->
+      <div
+        class="modal fade"
+        id="exitModal"
+        tabindex="-1"
+        aria-labelledby="exitModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 tex" id="exitModalLabel">Aviso</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Deseja realmente sair?</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <a href="../index.html" class="btn btn-danger">Sair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal com um texto e que contenha scroll -->
+      <div
+        class="modal fade"
+        id="messagesModal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Caixa de Entrada
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action active"
+                  aria-current="true"
+                >
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Mensagem selecionada</h5>
+                    <small>Hoje</small>
+                  </div>
+                  <p class="mb-1">Texto mensagem selecionada.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 01</h5>
+                    <small class="text-muted">1 dia atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 01.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 02</h5>
+                    <small class="text-muted">1 dia atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 02.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 03</h5>
+                    <small class="text-muted">2 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 03.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 04</h5>
+                    <small class="text-muted">2 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 04.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 05</h5>
+                    <small class="text-muted">3 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 05.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 06</h5>
+                    <small class="text-muted">3 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 06.</p>
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 07</h5>
+                    <small class="text-muted">4 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 07.</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Título Mensagem 08</h5>
+                    <small class="text-muted">5 dias atrás</small>
+                  </div>
+                  <p class="mb-1">Corpo mensagem 08.</p>
+                </a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#formSendMessageModal"
+              >
+                Responder mensagem
+              </button>
+              <button type="button" class="btn btn-danger">Apagar</button>
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#formAnswerMessageModal"
+              >
+                Responder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal com um formulário -->
+      <div
+        class="modal fade"
+        id="formAnswerMessageModal"
+        tabindex="-1"
+        aria-labelledby="formAnswerMessageModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="formAnswerMessageModalLabel">
+                Responder Mensagem
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-email" class="col-form-label"
+                    >Email do Destinatário</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="recipient-email"
+                    placeholder="nome@ufc.br"
+                    value="destinatario@ufc.br"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="message-title"
+                    class="col-form-label"
+                    value="Resposta: Mensagem selecionada"
+                    >Título da Mensagem</label
+                  >
+                  <input type="text" class="form-control" id="message-title" />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Corpo da Mensagem</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-success">
+                Enviar Mensagem
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="formSendMessageModal"
+        tabindex="-1"
+        aria-labelledby="formSendMessageModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="formSendMessageModalLabel">
+                Responder Mensagem
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-email" class="col-form-label"
+                    >Email do Destinatário</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="recipient-email"
+                    placeholder="nome@ufc.br"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message-title" class="col-form-label"
+                    >Título da Mensagem</label
+                  >
+                  <input type="text" class="form-control" id="message-title" />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Corpo da Mensagem</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-success">
+                Enviar Mensagem
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-sm-6 col-md-7 headerText headerBarItem">
+          Tecnologias Web 2022.2 - Novo SIGAA - Sistema Integrado de Gestão de
+          Atividades Acadêmicas
+        </div>
+
+        <div
+          class="col-11 col-sm-6 col-md-5 d-flex justify-content-center headerBarItem"
+        >
+          <div class="container">
+            <div class="row d-flex justify-content-around">
+              <button
+                type="button"
+                class="col-8 headerButton inboxButton btn btn btn-primary position-relative d-flex justify-content-between align-items-center align-content-center"
+                data-bs-toggle="modal"
+                data-bs-target="#messagesModal"
+              >
+                <div class="buttonImage">
+                  <!-- Spinners -->
+                  <span
+                    class="spinner-grow spinner-grow-sm"
+                    role="status"
+                  ></span>
+                </div>
+                <div class="buttonText">Caixa de Entrada</div>
+                <!-- Badges -->
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >
+                  99+
+                  <span class="visually-hidden">mensagens não lidas</span>
+                </span>
+              </button>
+              <button
+                class="col-3 headerButton btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                role="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exitModal"
+              >
+                Sair
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    <nav>
-        <a href="painel_de_controle.html">Painel de Controle</a>
-        <a href="historico.html">Histórico</a>
-        <a href="cadastro_atividades.html">Cadastro de Componentes Curricularess</a>    
+
+    <!-- Modal fullscreen -->
+    <div
+      class="modal fade"
+      id="studentManualModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="studentManualModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="studentManualModalLabel">
+              Manual do Aluno
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Scrollspy -->
+            <div class="row">
+              <div class="col-12 col-sm-4">
+                <div id="list-example" class="list-group">
+                  <a
+                    class="list-group-item list-group-item-action"
+                    href="#list-item-1"
+                    >Boas Vindas</a
+                  >
+                  <a
+                    class="list-group-item list-group-item-action"
+                    href="#list-item-2"
+                    >Sobre o Guia do Estudante</a
+                  >
+                  <a
+                    class="list-group-item list-group-item-action"
+                    href="#list-item-3"
+                    >A Importância da Universidade Pública</a
+                  >
+                  <a
+                    class="list-group-item list-group-item-action"
+                    href="#list-item-4"
+                    >Avaliações Parciais</a
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-sm-8">
+                <div
+                  data-bs-spy="scroll"
+                  data-bs-target="#list-example"
+                  data-bs-smooth-scroll="true"
+                  class="scrollspy-example"
+                  tabindex="0"
+                >
+                  <h4 id="list-item-1">Boas Vindas</h4>
+                  <p>
+                    Com grande satisfação, transmitimos as boas-vindas aos novos
+                    alunos da Universidade Federal do Ceará. Parabenizamos todos
+                    pelo êxito no processo seletivo que os trouxe para uma das
+                    maiores e mais bem avaliadas universidades públicas do País,
+                    e desejamos que suas jornadas acadêmicas lhes abram as
+                    portas para a realização de seus projetos de vida. A UFC os
+                    acolhe em um momento desafiador, depois de expandir-se,
+                    extraordinariamente, em anos recentes. Hoje, nossa
+                    Instituição reúne 110 cursos presenciais em Fortaleza,
+                    Sobral, Quixadá, Russas e Crateús, além de oferecer 9
+                    semipresenciais, na modalidade a distância, com 29 polos
+                    espalhados pelo interior cearense. A pós-graduação, por sua
+                    vez, matricula 7 mil alunos, que se distribuem por 43 cursos
+                    de doutorado e 67 de mestrado. Ao assumir tais dimensões, a
+                    Universidade busca honrar seu compromisso com a sociedade,
+                    oferecendo ensino de qualidade, pesquisando e prestando
+                    serviços à população, através de 800 ações e projetos de
+                    extensão que beneficiam todos os 184 municípios cearenses.
+                    Vocês encontrarão uma Instituição empenhada em contribuir
+                    para o desenvolvimento social e econômico. Aqui, zelamos
+                    pela liberdade de pensamento e expressão e nos desdobramos
+                    em defesa dos preceitos humanísticos que, desde o princípio,
+                    orientam nossa caminhada. A partir de agora, vocês nos
+                    ajudarão a seguir escrevendo essa história.
+                  </p>
+                  <h4 id="list-item-2">Sobre o Guia do Estudante</h4>
+                  <p>
+                    Uma frase que você ouvirá muito por toda a Universidade é “a
+                    UFC é um mundo”. E é verdade mesmo: se fosse um município
+                    cearense, a Universidade Federal do Ceará só perderia em
+                    população para a cidade de Fortaleza, caso somássemos as
+                    comunidades estudantil, de servidores docentes e
+                    técnico-administrativos e a sociedade beneficiada pelas
+                    ações de extensão. Aqui, circulam estudantes e profissionais
+                    de todos os 184 municípios do Ceará e oriundos de outros
+                    estados e países. Para ajudar nossas alunas e alunos de
+                    graduação a se orientar nesse universo de saberes,
+                    relacionamentos e novas experiências que integram o
+                    cotidiano acadêmico, é que a Coordenadoria de Comunicação
+                    Social e Marketing Institucional da Universidade Federal do
+                    Ceará criou o Guia do Estudante. Essa produção tem a missão
+                    de trazer conhecimento qualificado e acessível sobre os
+                    diferentes aspectos que compõem o cotidiano acadêmico, bem
+                    como sobre os serviços, equipamentos e políticas de
+                    permanência que a UFC possui e disponibiliza ao público
+                    discente. Também com este manual, toda a comunidade
+                    acadêmica ficará ciente de normas e diretrizes
+                    institucionais que regulam a vida na Universidade, bem como
+                    sobre os direitos e deveres dos estudantes. Queremos que
+                    este se torne um instrumento de consulta permanente, da
+                    entrada na Universidade até a cerimônia de colação de grau.
+                    E que todas as alunas e alunos possam ter informações
+                    essenciais à distância de um clique, seja através do site do
+                    Guia do Estudante, dos vídeos e publicações em nossos outros
+                    canais na internet, seja por meio deste livro digital. O
+                    Guia do Estudante é um projeto feito com empatia e dedicação
+                    para toda a Universidade Federal do Ceará. Curta,
+                    compartilhe e contribua para que ele seja conhecido,
+                    consultado e aprimorado.
+                  </p>
+                  <h4 id="list-item-3">
+                    A Importância da Universidade Pública
+                  </h4>
+                  <p>
+                    A Universidade Federal do Ceará é uma instituição pública de
+                    ensino superior. Todos nós utilizamos corriqueiramente o
+                    adjetivo “público” de forma passiva e, talvez por isso, nem
+                    questionamos seu sentido profundo. Precisamos nos apropriar
+                    ativamente desse conceito, incorporá-lo e torná-lo parte de
+                    nosso cotidiano. Se a “coisa pública” estiver saudável, os
+                    indivíduos prosperam na saúde, mas, se não for cuidada e
+                    adoecer, o mundo fica sem horizontes e as pessoas padecem em
+                    seus cárceres privados. Ser público é um valor que precisa
+                    ser mais compreendido, cultivado e cuidado para que possamos
+                    consolidar vários processos de sociabilidade em nossas
+                    instituições e em nosso País. Vale lembrar que a expressão
+                    “coisa pública” provém do latim res publica, que dá origem
+                    ao conceito de república. Da “coisa pública” depende a
+                    universalização dos direitos fundamentais à educação, à
+                    saúde, à segurança, à mobilidade, dentre outros, assim como
+                    a consolidação da democracia e a defesa e proteção da
+                    natureza. Viver numa república exige foco na construção
+                    coletiva do espaço público, para que sejam garantidos seu
+                    pleno estabelecimento e as oportunidades básicas para os
+                    indivíduos desenvolverem seus talentos e competências,
+                    visando às suas conquistas individuais e à emancipação
+                    coletiva. Aristóteles imprimiu na formação ocidental a
+                    definição de ser humano como “animal político”, e essa é,
+                    sim, nossa “natureza”; por isso, somente em sociedade nos
+                    reconhecemos a nós mesmos e podemos construir nossa
+                    identidade individual. Temos o dever de protagonizar a
+                    defesa da “coisa pública” e de promover formação e educação
+                    que a favoreça. “Coisa pública” é patrimônio de todos nós,
+                    pelo qual somos responsáveis e convidados a cuidar e
+                    proteger. Por ser pública, é bem comum, e não pode ser
+                    confundida com propriedade privada, da qual dispomos de
+                    acordo com nosso livre-arbítrio. Ao contrário, a “coisa
+                    pública” deve ser sustentada por decisões igualmente
+                    públicas e coletivas, cabendo aos gestores garantir seus
+                    propósitos sociais e responder pelo cumprimento de sua
+                    missão. Somos UFC. Faz parte de nosso ofício corresponder à
+                    maioridade intelectual esperada de cada membro do corpo
+                    universitário e realizar o fim social esperado de nós. É
+                    desse modo que a Universidade cumprirá sua missão social e
+                    emancipatória.
+                  </p>
+                  <h4 id="list-item-4">Avaliações Parciais</h4>
+                  <p>
+                    No sistema semestral, a aprovação por média ocorre quando o
+                    aluno obtém nota igual ou superior a 7,0. Caso tenha
+                    conseguido mais que 4,0 e menos que 7,0, tem o direito de
+                    submeter-se à avaliação final (AF), cuja nota somada à média
+                    das APs deve resultar em média igual ou superior a 5,0 para
+                    aprovação. No sistema anual, o aluno precisa de uma nota de
+                    AP igual ou superior a 6,0 ao fim das 18 semanas iniciais de
+                    aula (primeiro subperíodo) para que essa média seja
+                    considerada no cálculo no subperíodo seguinte. Caso não
+                    consiga, deve submeter-se à primeira recuperação para obter
+                    a nota de recuperação I (NRI). Sua nota no primeiro
+                    subperíodo será então a média aritmética entre a API e a
+                    NRI, chamada nota de avaliação progressiva I (NAPI). No
+                    segundo subperíodo, o procedimento é o mesmo. A nota final
+                    na disciplina será a média entre as notas de API e APII ou
+                    entre NAPI e nota de APII. Quem obtém no fim do ano letivo
+                    NAPII igual ou superior a 7,0 está aprovado por média. Os
+                    que conseguem igual ou superior a 4,0 e inferior a 7,0
+                    submetem-se à segunda recuperação. Para passar, é preciso,
+                    após a NRII, alcançar média final igual ou superior a 5,0
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar bg-white">
+      <div
+        class="container-fluid d-flex justify-content-end justify-content-sm-center"
+      >
+        <!-- Button group -->
+        <div class="headerNavbar btn-group d-none d-sm-block" role="group">
+          <a class="btn btn-secondary" href="painel_de_controle.html"
+            >Painel de Controle</a
+          >
+          <a class="btn btn-secondary" href="historico.html">Histórico</a>
+          <a class="btn btn-secondary active" href="cadastro_atividades.html"
+            >Cadastro de Componentes Curriculares</a
+          >
+          <div class="btn-group" role="group">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Informações
+            </button>
+            <!-- Dropdowns -->
+            <ul class="dropdown-menu">
+              <li>
+                <button
+                  class="dropdown-item"
+                  data-bs-toggle="modal"
+                  data-bs-target="#studentManualModal"
+                >
+                  Manual do Aluno
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler d-block d-sm-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="headerNavbar"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Opções do Discente</h5>
+            <button
+              type="button"
+              class="btn-close btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <!-- <a class="nav-link" aria-current="page" href="#">Home</a> -->
+                <a class="nav-link" href="painel_de_controle.html"
+                  >Painel de Controle</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historico.html">Histórico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="cadastro_atividades.html"
+                  >Cadastro de Componentes Curriculares</a
+                >
+              </li>
+              <!-- Dropdowns -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Informações
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      data-bs-toggle="modal"
+                      data-bs-target="#studentManualModal"
+                    >
+                      Manual do Aluno
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
 
-    <main>
-        <section id="submit-activity">
-            <form>
-                <label for="name">Nome da Atividade</label>
-                <input id="name" type="text" placeholder="Nome da Atividade" required>
-                
+    <!-- Modal com grid -->
+    <div
+      class="modal fade"
+      id="enrollmentInfoModal"
+      tabindex="-1"
+      aria-labelledby="enrollmentInfoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 tex" id="enrollmentInfoModal">Aviso</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row d-flex justify-content-center">
+                <div class="col-8">
+                  <div
+                    id="carouselExampleIndicators"
+                    class="carousel slide"
+                    data-bs-ride="true"
+                  >
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                    </div>
+                    <!-- Carousel -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          style="width: 100%"
+                          src="https://www.ufc.br/images/ft_211028_reitoria_brasao_novo_gr.png"
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          style="width: 100%"
+                          src="https://www.ufc.br/images/221004_prex_fachada_gr.png"
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          style="width: 100%"
+                          src="https://www.ufc.br/images/_images/noticias/2022/ft_221005_prppg_gr.png"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6"></div>
+                <div class="col-12">
+                  Essa é uma opção para o estudante que não poderá cursar
+                  nenhuma disciplina naquele semestre, mas deseja manter seu
+                  vínculo com a UFC, garantindo assim sua vaga na Universidade.
+                  O período de matrícula institucional é o mesmo da matrícula
+                  regular, discriminado sempre no Calendário Universitário,
+                  salvo no caso de não ter sido feita nenhuma matrícula
+                  curricular, quando o período se estende até o ajuste de
+                  matrícula. Essa modalidade de matrícula pode ser feita tanto
+                  pelo SIGAA quanto na coordenação, e só é permitida para alunos
+                  que já concluíram os dois primeiros semestres de seus cursos.
+                  Além disso, a matrícula institucional só tem validade para um
+                  semestre e, para uma duração maior, terá que ser renovada pelo
+                  aluno semestralmente, por no máximo, quatro semestres,
+                  subsequentes, ou não. Essa modalidade de vínculo não
+                  influencia o cálculo do IRA
+                </div>
+              </div>
+              <div class="row">
+                <p>
+                  <a
+                    class="btn btn-primary"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    Período de Matrícula Institucional
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">De 23/10/2022 a 26/10/2022</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Sair
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <label for="hours">
-                    Quantidade de Horas
-                </label>
+    <main class="container-fluid d-flex justify-content-center">
+      <div class="row">
+        <section id="submit-activity" class="col-8">
+          <form>
+            <label for="name">Nome da Atividade</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Nome da Atividade"
+              required
+            />
 
-                <input id="hours" type="number" placeholder="64" min="1" required>
-                
-            
-                <label for="date">Data</label>
-                <input id="date" type="date" placeholder="01/09/2022" max="2022-09-01" required>
-              
-                <label for="email">Email do Responsável</label>
-                <input id="email" type="email" placeholder="email@ufc.br" required>
-                
-                <label for="phone">Telefone do Responsável</label>
-                <input id="phone" type="tel" placeholder="(xx)xxxxx-xxxx" required>
-                
-                <label for="type-activity">Tipo de Atividade</label>
+            <label for="hours"> Quantidade de Horas </label>
 
-                <select id="type-activity" name="Tipo de Atividade" required>
-                    <option value="complementares">Atividade Complementar</option>
-                    <option value="extensao">Atividade de Extensão</option>
-                </select>
+            <input id="hours" type="number" placeholder="64" min="1" required />
 
-                <input type="submit" value="Cadastrar">
-            </form>
+            <label for="date">Data</label>
+            <input
+              id="date"
+              type="date"
+              placeholder="01/09/2022"
+              max="2022-09-01"
+              required
+            />
+
+            <label for="email">Email do Responsável</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="email@ufc.br"
+              required
+            />
+
+            <label for="phone">Telefone do Responsável</label>
+            <input
+              id="phone"
+              type="tel"
+              placeholder="(xx)xxxxx-xxxx"
+              required
+            />
+
+            <label for="type-activity">Tipo de Atividade</label>
+
+            <select id="type-activity" name="Tipo de Atividade" required>
+              <option value="complementares">Atividade Complementar</option>
+              <option value="extensao">Atividade de Extensão</option>
+            </select>
+
+            <input type="submit" value="Cadastrar" />
+          </form>
         </section>
-
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2022 - Novo SIGAA</p>
+      <p>&copy; 2022 - Novo SIGAA</p>
     </footer>
-
-
-</body>
+  </body>
 </html>
