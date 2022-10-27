@@ -1,5 +1,9 @@
 # Arrays Javascript
 
+## Implementação
+
+A implementação pode ser encontrada [nesse arquivo JS](./script.js) ou também abaixo nessa README.
+
 ### Questão 01
 
 Escreva uma função JavaScript para verificar se uma entrada é um
@@ -211,12 +215,8 @@ console.log(resultAddElementsToStack); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 ### Versão do Node
 
-````
+```
 
 $ node --version
 v10.19.0
-
 ```
-
-```
-````
