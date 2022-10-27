@@ -2,7 +2,7 @@
 
 ## Implementação
 
-A implementação pode ser encontrada [nesse arquivo JS](./script.js) ou também abaixo nessa README.
+A implementação pode ser encontrada [neste arquivo JS](./script.js) ou também abaixo na README. O roteiro da atividade se encontra [neste pdf](../../docs/lab07-javascript-arrays.pdf), mas assim como o código, o enunciado das questões está descrito abaixo.
 
 ### Questão 01
 
