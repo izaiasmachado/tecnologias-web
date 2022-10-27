@@ -216,7 +216,6 @@ console.log(resultAddElementsToStack); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ### Versão do Node
 
 ```
-
 $ node --version
 v10.19.0
 ```
