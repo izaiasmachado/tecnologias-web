@@ -137,8 +137,8 @@ const sortObject = (arr) => {
 
 const mostFrequentValue = (arr) => {
   const occurencesMap = countOccurrences(arr);
-  const occurrencesObject = objectToObjectArray(occurencesMap);
-  const sortedOccurrences = sortObject(occurrencesObject);
+  const occurrences = objectToObjectArray(occurencesMap);
+  const sortedOccurrences = sortObject(occurrences);
   const mostFrequent = sortedOccurrences.pop();
   return mostFrequent.key;
 };
@@ -153,21 +153,21 @@ console.log(mostFrequent); // 9
 Escreva um programa JavaScript para remover itens duplicados de um array (ignore a diferenciação entre maiúsculas e minúsculas).
 
 ```js
-const uniqueValues = (arr) => {
-  const map = {};
-
-  arr.forEach((value) => {
-    const stringValue = isNaN(value) ? value : String(value);
-    const lowerCaseString = stringValue.toLowerCase();
-    map[lowerCaseString] = 1;
+const arrayToLowerCase = (arr) =>
+  arr.map((value) => {
+    const isString = typeof value === "string";
+    const parsed = isString ? value.toLowerCase() : value;
+    return parsed;
   });
 
-  return Object.keys(map);
-};
+const getUniqueArray = (arr) =>
+  arr.filter((value, index) => arr.indexOf(value) === index);
 
-const testArrayUnique = [1, 1, 1, 1, 33, 333, "a", "b", "A"];
-const testArrayUniqueValues = uniqueValues(testArrayUnique);
-console.log(testArrayUniqueValues); // [ '1', '33', '333', 'a', 'b' ]
+const uniqueValues = (arr) => {
+  const lowerCaseArray = arrayToLowerCase(arr);
+  const uniqueArray = getUniqueArray(lowerCaseArray);
+  return uniqueArray;
+};
 ```
 
 ### Questão 09
@@ -200,11 +200,7 @@ Crie dois vetores chamados vetorPilha e vetorAdiciona. Inicialmente, o vetorPilh
 
 ```js
 const addElementsToStack = (stack, elements) => {
-  const result = stack.slice();
-  elements.forEach((value) => {
-    result.push(value);
-  });
-  return result;
+  return [...stack, ...elements];
 };
 
 const vetorPilha = [1, 2, 3, 4, 5];

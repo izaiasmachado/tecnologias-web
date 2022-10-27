@@ -102,8 +102,8 @@ const sortObject = (arr) => {
 
 const mostFrequentValue = (arr) => {
   const occurencesMap = countOccurrences(arr);
-  const occurrencesObject = objectToObjectArray(occurencesMap);
-  const sortedOccurrences = sortObject(occurrencesObject);
+  const occurrences = objectToObjectArray(occurencesMap);
+  const sortedOccurrences = sortObject(occurrences);
   const mostFrequent = sortedOccurrences.pop();
   return mostFrequent.key;
 };
@@ -114,21 +114,25 @@ console.log(mostFrequent); // 9
 
 // Questão 08
 console.log("===== Questão 08 =====");
-const uniqueValues = (arr) => {
-  const map = {};
-
-  arr.forEach((value) => {
-    const stringValue = isNaN(value) ? value : String(value);
-    const lowerCaseString = stringValue.toLowerCase();
-    map[lowerCaseString] = 1;
+const arrayToLowerCase = (arr) =>
+  arr.map((value) => {
+    const isString = typeof value === "string";
+    const parsed = isString ? value.toLowerCase() : value;
+    return parsed;
   });
 
-  return Object.keys(map);
+const getUniqueArray = (arr) =>
+  arr.filter((value, index) => arr.indexOf(value) === index);
+
+const uniqueValues = (arr) => {
+  const lowerCaseArray = arrayToLowerCase(arr);
+  const uniqueArray = getUniqueArray(lowerCaseArray);
+  return uniqueArray;
 };
 
 const testArrayUnique = [1, 1, 1, 1, 33, 333, "a", "b", "A"];
 const testArrayUniqueValues = uniqueValues(testArrayUnique);
-console.log(testArrayUniqueValues); // [ '1', '33', '333', 'a', 'b' ]
+console.log(testArrayUniqueValues); // [ 1, 33, 333, 'a', 'b' ]
 
 // Questão 09
 console.log("===== Questão 09 =====");
@@ -152,11 +156,7 @@ console.log(resultSumArrays); // [ 2, 2, 2, 2, 3 ]
 // Questão 10
 console.log("===== Questão 10 =====");
 const addElementsToStack = (stack, elements) => {
-  const result = stack.slice();
-  elements.forEach((value) => {
-    result.push(value);
-  });
-  return result;
+  return [...stack, ...elements];
 };
 
 const vetorPilha = [1, 2, 3, 4, 5];
