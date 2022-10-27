@@ -16,17 +16,17 @@ console.log(isArray([1, 2, 4, 0])); // true
 
 Escreva uma função JavaScript para clonar um array.
 
-`````js
+````js
 const arrayClone = (arr) => [...arr];
 const newArray = arrayClone([1, 2, 4, 0]);
 console.log(newArray); // [1, 2, 4, 0]```
-```
+````
 
 ### Questão 03
 
 Escreva uma função JavaScript para obter o primeiro elemento de um array. Passar um parâmetro n retornará os primeiros n elementos do array.
 
-````js
+```js
 const firstNth = (arr, n = 1) => arr.slice(0, n);
 const testFirstNth = [7, 9, 0, -2];
 console.log(firstNth(testFirstNth)); // [7]
@@ -35,9 +35,9 @@ console.log(firstNth(testFirstNth, 2)); // [7, 9]
 
 ### Questão 04
 
-Escreva uma função JavaScript para obter o último elemento de um array. Passar um parâmetro 'n' retornará os últimos n elementos do array.
+Escreva uma função JavaScript para obter o último elemento de um array. Passar um parâmetro n retornará os últimos n elementos do array.
 
-````js
+```js
 const testLastNth = [7, 9, 0, -2];
 const lastNth = (arr, n = 1) => arr.slice(-n);
 console.log(lastNth(testLastNth)); // [ -2 ]
@@ -49,7 +49,7 @@ console.log(lastNth(testLastNth, 2)); // [ 0, -2 ]
 Escreva um programa JavaScript simples para unir todos os elementos
 de um array em uma string.
 
-````js
+```js
 const joinArrayString = (arr) => arr.join("");
 console.log(joinArrayString(["a", "b", "c"])); // abc
 ```
@@ -58,7 +58,7 @@ console.log(joinArrayString(["a", "b", "c"])); // abc
 
 Escreva um programa JavaScript que aceite um número como entrada e insira traços (-) entre cada dois números pares. Por exemplo, se você aceitar 025468, a saída deve ser 0-254-6-
 
-````js
+```js
 const insertMinusBetweenEveryEvenPair = (number) => {
   const isNumber = !isNaN(number);
   if (!isNumber) return;
@@ -105,7 +105,7 @@ console.log(insertMinusBetweenEveryEvenPair(numberTest)); // 0-254-6-8
 
 Escreva um programa JavaScript para localizar o item mais frequente de um array.
 
-````js
+```js
 const countOccurrences = (arr) => {
   const occurences = {};
 
@@ -148,7 +148,7 @@ console.log(mostFrequent); // 9
 
 Escreva um programa JavaScript para remover itens duplicados de um array (ignore a diferenciação entre maiúsculas e minúsculas).
 
-````js
+```js
 const uniqueValues = (arr) => {
   const map = {};
 
@@ -171,7 +171,7 @@ console.log(testArrayUniqueValues); // [ '1', '33', '333', 'a', 'b' ]
 Existem dois arrays com valores individuais, escreva um programa JavaScript para calcular a soma de cada valor de índice individual dos
 arrays fornecidos.
 
-````js
+```js
 const sumArrays = (a, b) => {
   const lestElementsArray = a.length <= b.length ? a : b;
   const mostElementsArray = a.length > b.length ? a : b;
@@ -194,7 +194,7 @@ console.log(resultSumArrays); // [ 2, 2, 2, 2, 3 ]
 
 Crie dois vetores chamados vetorPilha e vetorAdiciona. Inicialmente, o vetorPilha conterá cinco elementos inteiros: `[1, 2, 3, 4, 5]`. Você deverá adicionar os valores contidos no `[6, 7, 8, 9, 10]` ao vetor pilha e mostrá-los no console.
 
-````js
+```js
 const addElementsToStack = (stack, elements) => {
   const result = stack.slice();
   elements.forEach((value) => {
@@ -211,7 +211,7 @@ console.log(resultAddElementsToStack); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 ### Versão do Node
 
-`````
+````
 
 $ node --version
 v10.19.0
@@ -219,3 +219,4 @@ v10.19.0
 ```
 
 ```
+````
