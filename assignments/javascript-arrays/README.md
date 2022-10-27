@@ -69,29 +69,28 @@ const insertMinusBetweenEveryEvenPair = (number) => {
 
   const numberString = number.toString();
   const numberArray = numberString.split("");
-  const evenNumbersIndexes = [];
 
-  numberArray.forEach((value, index, _) => {
-    if (value % 2 !== 0) return;
-    evenNumbersIndexes.push(index);
-  });
+  const evenNumberIndexes = numberArray.reduce((accumulator, value, index) => {
+    if (value % 2 === 0) accumulator.push(index);
+    return accumulator;
+  }, []);
 
-  const firstElementOfEvenNumberPair = evenNumbersIndexes.reduce(
-    (previous, value, index) => {
-      if (typeof previous === "number") {
-        previous = [previous];
+  const firstElementEvenNumberPair = evenNumberIndexes.reduce(
+    (accumulator, value, index) => {
+      const isPreceded = evenNumberIndexes[index - 1] == value - 1;
+      const isSuceeded = evenNumberIndexes[index + 1] == value + 1;
+
+      if (!isPreceded || isSuceeded) {
+        accumulator.push(value);
       }
 
-      const isPreceded = evenNumbersIndexes[index - 1] == value - 1;
-      const isSuceeded = evenNumbersIndexes[index + 1] == value + 1;
-
-      if (isPreceded && !isSuceeded) return previous;
-      return [...previous, value];
-    }
+      return accumulator;
+    },
+    []
   );
 
-  const minusInsertionIndex = firstElementOfEvenNumberPair.map(
-    (value, index, _) => value + index
+  const minusInsertionIndex = firstElementEvenNumberPair.map(
+    (value, index) => value + index
   );
 
   minusInsertionIndex.forEach((value) => {
